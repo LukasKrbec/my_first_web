@@ -137,9 +137,6 @@ a {
     text-align: center;
     padding-bottom: 3px;
 }
-.menu a:hover {
-    /* font-size: 17px;  */
-}
 .menu li:hover {
     width: 90px;
     border-left: 9px solid rgb(82, 55, 235);
