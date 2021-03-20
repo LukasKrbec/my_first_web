@@ -1,3 +1,9 @@
+/* CLEAR FIX */
+.clear::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 /* general */
 * {
     /* border: solid black 1px; */
@@ -8,8 +14,11 @@ body{
     color:#323232;
     background-color: #eeefed;
     font-family: "Source Sans Pro", sans-serif;
+    font-size: 100%;
+    width: 100%;
 }
 header {
+    margin: 0 auto;
     width: 100%;
 }
 ul {
@@ -21,14 +30,14 @@ a {
 }
 /* header */
 .conteiner{
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 0 auto;
     clear: both;
 
 }
 .header_contact {
     width: 100%;
-    height: 60px;
+    /* height: 60px; */
     margin: 0 auto;
     background-image: linear-gradient(to right, rgb(129, 110, 233), rgb(82, 55, 235));
     background-color: rgb(98, 74, 238);
@@ -41,131 +50,149 @@ a {
 }
 .header_contact .social {
     float:right;
-    margin-right: 3px;
+    margin-right: 0.1875em; 
 }
 .personal li {
     float: left;
     color: white;
     margin: 0px;
-    padding: 0px 20px;
-    line-height: 58px;
+    padding: 0px 1.25em;
+    line-height: 3.625em;
 }
 .personal i {
     font-size: 1.2em;
     vertical-align: middle;
-    padding-right: 10px;
+    padding-right: 0.625em;
 }
 .personal a {
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     vertical-align: middle;
-    padding: 3px 5px 5px 5px;
+    padding: 0.1875em 0.3125em 0.3125em 0.3125em;
 }
 .social li{
     float: left; 
-    margin: 5px 2px;
+    margin: 0.3125em 0.125em;
 }
 .social a {
-    padding: 5px 10px;
+    padding: 0.3125em 0.625em;
     display:block;
     color: white;
 }
 .social i {
     font-size: 2.5em;
     text-align: center;
-
 }
 .header_contact .social a:hover {
     background-color: rgb(255, 127, 255);
-    border-radius: 5px;
+    border-radius: .3125em;
 }
 .header_contact .personal a:hover {
     background-color: rgb(255, 127, 255);
-    border-radius: 5px;
+    border-radius: .3125em;
 }
 /* header MENU */
 .header_menu {
+
     clear: both;
     width: 100%;
-    height: 80px;
     margin: 0 auto;
     background-image: linear-gradient(to left, rgb(255, 127, 255), rgb(255, 152, 255));
     background-color: rgb(255, 127, 255);
 }
-.header_menu .logo {
-    float: left;
-}
+
 .logo{
-    width: 150;
+    float: left;
     display:block;
-    font-size: 70px;
+    font-size: 4.375em;
     color: rgb(255, 255, 255);
-    margin-left: 65px;
+    margin-left: 0.8em;
 }
 .logo span {
     display: inline-block;
     transform: rotateY(180deg);
-    margin-right: -8px;
+    margin-right: -0.11em;    
 }
 .header_menu .menu {
     float: right;
 }
+.menu ul {
+    display: block;
+    padding-right: 1rem;
+    height: 5em;
+    width: 24em;
+    font-size: 1em;
+
+}
 .menu li {
-    position: relative;
+    box-sizing: border-box;
     float: left;
     display: block;
-    height: 80px;
-    width: 100px;
-    border-left: 4px solid rgb(82, 55, 235);
-    font-size: 18px;
+    width: 25%;
+    height: 100%;
+    border-left: 0.2rem solid rgb(82, 55, 235);
+    border-right: 0.2rem solid rgb(82, 55, 235);
+    font-size: 1em;
 }
 .menu li:last-of-type {
 
-    border-right: 4px solid rgb(82, 55, 235);
+    border-right: 0.4rem solid rgb(82, 55, 235);
+}
+.menu li:first-of-type {
+
+    border-left: 0.4rem solid rgb(82, 55, 235);
 }
 .menu  a {
     color: rgb(82, 55, 235);
-    padding-top: 10px;
     display: block;
     font-size: inherit;
     text-align: center;
-    padding-bottom: 11px;
+    margin: 0 auto;
+    height: 100%;
 }
 .menu i {
+    padding-top: 0.425em;
+
     display: block;
     font-size: 2em;
     text-align: center;
-    padding-bottom: 3px;
+    padding-bottom: 0.1875rem;
 }
 .menu li:hover {
-    width: 90px;
-    border-left: 9px solid rgb(82, 55, 235);
-    border-right: 5px solid rgb(82, 55, 235);
-    font-size: 16px;
+    border-left: 0.4rem solid rgb(82, 55, 235);
+    border-right: 0.4rem solid rgb(82, 55, 235);
+    font-size: 0.9em;
+}
+.menu li:hover:first-of-type {
+    border-left: 0.6rem solid rgb(82, 55, 235);
 }
 .menu li:hover:last-of-type {
-    border-right: 9px solid rgb(82, 55, 235);
+    border-right: 0.6rem solid rgb(82, 55, 235);
 }
 /* Article */
 .post_header {
     display: block;
     width: 100%;
-    height: 160px;
-    background-size: contain;
+    height: 10.5em;
+    background-size: auto;
     background: url("../img/background.jpg") center no-repeat ;
+    background-color: rgb(134, 134, 134);
 }
 .post_header a{
-    margin-left: 15px;
+    display: block;
+    padding: 1.7em 0;
+    margin-left: 3.6em;
+
 }
 
 .post_header h1{
     display: inline-block;
-    margin-top: 40px;
+    /* margin-top: 40px; */
     color: white;
     text-align: center;
     background-color: rgb(129, 110, 233);
-    border-radius: 5px;
-    padding: 20px 30px;
+    border-radius: 0.15625em;
+    padding: 0.625em 0.9375em;
     letter-spacing: 0px;
 }
 .post_header span{
@@ -173,28 +200,25 @@ a {
     
 }
 .post_header i{
-    margin-left: 15px;  
+    margin-left: 0.47em;  
 }
 .post_header h1:hover{
-    margin-top: 42px;
-    margin-left: 2px;
-    padding: 18px 28px;
-    font-size: 30px;
+    font-size: 1.9em;
 }
 .article_header {
-    margin: 80px 0px;
+    display: block;
+    margin: 3em 1em;
 }
 .article_header h1{
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2em;
     text-align: center;
 } 
 .controls {
     text-align: center;
-    width: 700px;
     margin: 0 auto;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    margin-top: 3em;
+    margin-bottom: 2em;
 }
 .controls li {
     display: inline-block;
@@ -204,10 +228,10 @@ a {
     color: rgb(255, 255, 255);
     background-color: rgb(82, 55, 235);
     border-radius: 5px;
-    width: 60px;
-    font-size: 30px;
+    width: 2.5em;
+    font-size: 1.5em;
     font-weight: 400;
-    padding: 20px 30px;
+    padding: 0.7em 1em;
 }
 .controls a:hover,
 .controls a:focus,
@@ -220,77 +244,79 @@ a {
     height: 100%;
     margin: 0 auto;
     display: block;
-    clear: both;
 }
-.gallery::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
 .gallery img {
-    float: left;
-    display: block;
+    max-width: 100%;
+  
+    
+}
+.gallery a{
+    margin: 0;
+    box-sizing: border-box;
+    display: inline-block;
     width: 33%;
-    margin-left: 0.3%;
-    margin-bottom: 0.3%;
+   
+
+    padding-left: 0.3%;
+    padding-bottom: 0.3%;
 }
 
 aside {
     color: rgb(82, 55, 235);
-    margin-top: 60px;
+    margin-top: 4em;
     clear: both;
     background-color: rgb(255, 127, 255); 
-    height: 80px; 
+    height: 5em; 
     text-align: center;
 }
 aside strong {
     display: inline-block;
-    margin-top: 20px;    
+    margin-top: 1.5em;    
 }
 aside ul {
     text-align: center;
     display: block;
     width: 100%;
-    margin-top: -49px;
+    margin-top: -3.7em;
 }
 aside li {
     display: inline-block;
     color: white;
     padding: 0px 0px;
-    line-height: 58px;
+    line-height: 5em;
 }
 aside li:first-child{
-    margin-right: 350px;
+    margin-right: 23em;
 }
 aside  i {
     font-size: 1.5em;
     vertical-align: middle;
-    padding: 0px 10px;
+    padding: 0px 0.7em;
 }
 aside  a {
     color: white;
-    font-size: 16px;
+    font-size: 1em;
     vertical-align: middle;
-    padding: 3px 5px 5px 5px;
+    padding: 0.2em 0.3em 0.3em 0.3em;
 }
 aside a:hover {
     background-color: rgb(82, 55, 235);
-    border-radius: 5px;    
+    border-radius: 0.3em;    
 }
 footer {
-    height: 80px;
+    height: 5em;
     text-align: right;
     background-image: linear-gradient(to left, rgb(129, 110, 233), rgb(82, 55, 235));
 }
 footer li {
     display: inline-block;
-    font-size: 1.3em;
-    line-height: 80px;
+    font-size: 1.5em;
+    line-height: 3.3em;
 }
 footer li:after {
     content: "|";
     color: white;
-    margin: 0px 5px;
+    margin: 0px 0.3em;
 }
 footer li:last-child:after {
     content: "";
@@ -304,5 +330,114 @@ footer a:hover{
     text-decoration: underline;
 }
 footer ul{
-    margin-right: 15px;
+    margin-right: 1em;
+}
+/* media queries */
+@media (max-width: 780px){
+.gallery a{
+    display: inline-block;
+    width: 49.7%;
+}
+.gallery img {
+    margin: 0;
+    /* float: left; */
+    display: block;
+    width: 100%;
+    height: auto;
+    /* margin-left: 0.3%; */
+    /* margin-bottom: 0.3%; */
+}
+aside {
+    margin-top: 0px;
+    height: auto;
+}
+aside ul {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 0;
+}
+aside li:first-child {
+    margin-right: 2em;
+}
+footer {
+    text-align: center;
+}
+footer ul{
+    margin-right: 0em;
+}
+
+}
+@media (max-width: 600px){
+    body{
+        min-width: 320px;
+        font-size: 80%;
+    }
+    .menu ul {
+        float: none;
+        display: inline-block;
+        margin: 0 auto;
+        padding-right: 0rem;
+    }
+    .header_menu .menu {
+        float: none;
+        margin: 0 auto;
+        padding-right: 0rem;
+        text-align: center;
+    }
+    .logo {
+        text-align: center;
+        display: block;
+        width: 300px;
+        float: none;
+        margin: 0 auto;
+        padding-right: 0rem;
+    }
+    .header_contact .personal {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .personal ul{
+        display: block;
+        width: 100%;
+        margin: 0.5em auto;
+        text-align: center;
+
+    }
+    .personal li {
+        float: none;
+        display: inline-block;
+        line-height: 0;
+    }
+}
+@media (max-width: 540px){
+    .gallery a{
+        display: block;
+        width: 100%;
+    }
+}
+@media (max-width: 420px){
+    .controls a {
+        display: block;
+        color: rgb(255, 255, 255);
+        background-color: rgb(82, 55, 235);
+        border-radius: 5px;
+        width: 2.0em;
+        font-size: 1.5em;
+        font-weight: 400;
+        padding: 0.7em 0.8em;
+}
+@media (max-width: 340px){
+    footer {
+        font-size: 80%;
+        text-align: center;
+    }
+    aside li:first-child {
+        margin-right: 1em;
+    }
+    footer ul{
+        margin-right: 0em;
+    }
+
 }
